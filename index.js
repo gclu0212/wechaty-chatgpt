@@ -85,7 +85,7 @@ wechaty
 
 async function reply(room, contact, content) {
   console.log(`xxxxxx: ${contact} content: ${content}`);
-  if (contact===('Contact<Smart_IIPS>')) {
+  if (contact.startsWith('Contact<Smart_IIPS')) {
     console.log(`zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz`);
   }
   else {
