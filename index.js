@@ -84,6 +84,7 @@ wechaty
   .catch(e => console.error(e));
 
 async function reply(room, contact, content) {
+  contact = contact.trim();
   console.log(`xxxxxx: ${contact} content: ${content}`);
   if (contact.startsWith('Contact<Smart_IIPS')) {
     console.log(`zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz`);
