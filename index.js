@@ -89,14 +89,14 @@ async function reply(room, contact, content) {
     const target = room || contact;
     await send(target, 'dong');
   }
-  if (content.startsWith('/c ')) {
-    const request = content.replace('/c ', '');
+ // if (content.startsWith('/c ')) {
+ //   const request = content.replace('/c ', '');
     await chatgptReply(room, contact, request);
-  }
-  if (content.startsWith('/chatgpt ')) {
-    const request = content.replace('/chatgpt ', '');
-    await chatgptReply(room, contact, request);
-  }
+ // }
+ // if (content.startsWith('/chatgpt ')) {
+  //  const request = content.replace('/chatgpt ', '');
+   // await chatgptReply(room, contact, request);
+ // }
 }
 
 async function chatgptReply(room, contact, request) {
