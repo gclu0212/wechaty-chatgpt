@@ -96,10 +96,10 @@ async function reply(room, contact, content) {
   else {
     await chatgptReply(room, contact, request);
   }
- // if (content.startsWith('/chatgpt ')) {
-  //  const request = content.replace('/chatgpt ', '');
-   // await chatgptReply(room, contact, request);
- // }
+  if (content.startsWith('/chatgpt ')) {
+    const request = content.replace('/chatgpt ', '');
+    await chatgptReply(room, contact, request);
+  }
 }
 
 async function chatgptReply(room, contact, request) {
