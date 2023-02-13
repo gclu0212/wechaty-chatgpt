@@ -94,6 +94,7 @@ async function reply(room, contact, content) {
     await chatgptReply(room, contact, request);
   }
   else {
+    const request = content;
     await chatgptReply(room, contact, request);
   }
   if (content.startsWith('/chatgpt ')) {
