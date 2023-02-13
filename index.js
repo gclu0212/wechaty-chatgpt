@@ -68,7 +68,6 @@ wechaty
           }
         } else {
           //todo 光@，没内容
-          await chatgptReply(room, contact, content);
           console.log(`@ event emit. room name: ${topic} contact: ${contact} content: ${content}`);
         }
       }
@@ -85,6 +84,10 @@ wechaty
   .catch(e => console.error(e));
 
 async function reply(room, contact, content) {
+  if (contact ==='Smart_IIPS') {
+    
+  }
+  else {
   content = content.trim();
   if (content === 'ding') {
     const target = room || contact;
@@ -101,6 +104,7 @@ async function reply(room, contact, content) {
   if (content.startsWith('/chatgpt ')) {
     const request = content.replace('/chatgpt ', '');
     await chatgptReply(room, contact, request);
+  }
   }
 }
 
