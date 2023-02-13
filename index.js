@@ -84,7 +84,7 @@ wechaty
   .catch(e => console.error(e));
 
 async function reply(room, contact, content) {
-  if (contact.indexOf('Smart_IIPS')>=0) {
+  if (contact===('Contact<Smart_IIPS>')) {
     
   }
   else {
